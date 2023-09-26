@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="Home_container">
+      <homeLtftVue></homeLtftVue>
+      <router-view>
+
+      </router-view>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import HomeLtftVue from '@/components/Home_ltft.vue'
+import { mapState } from 'vuex'
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    HomeLtftVue
+  },
+  computed: {
+    ...mapState('moduleA', ['actives'])
+  },
+  activated () {
+    this.$router.push('/home/select/' + this.actives)
+  },
+  deactivated () {
   }
 }
 </script>
+<style lang="less" scoped>
+.Home_container {
+  display: flex;
+  padding: 20px;
+}
+</style>

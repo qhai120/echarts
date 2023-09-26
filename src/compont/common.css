@@ -1,0 +1,39 @@
+.red{
+    color: red;
+}
+.black{
+    color: black;
+}
+.flex{
+    display: flex;
+}
+.justify-content{
+    justify-content: space-between;
+}
+.align-items{
+    align-items: center;
+}
+.column{
+    flex-direction:column
+}
+.li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.boder{
+    border-collapse: collapse;
+    border: 1px solid #f5f5f5;
+}
+.boder-box{
+    box-sizing: border-box;
+}
+.link{
+    text-decoration: none;
+}
+.Home_item_padding{
+    padding-left: 20px;
+}
+.active{
+    color: orange;
+}
