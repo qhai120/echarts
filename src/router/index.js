@@ -56,7 +56,53 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue'),
+    children: [
+      {
+        path: '',
+        redirect: '/about/about/1'
+      },
+      {
+        path: 'about/1',
+        component: () => import('../components/About_item/About_1.vue'),
+        props: true
+      },
+      {
+        path: 'about/2',
+        component: () => import('../components/About_item/About_2.vue'),
+        props: true
+      },
+      {
+        path: 'about/3',
+        component: () => import('../components/About_item/About_3.vue'),
+        props: true
+      },
+      {
+        path: 'about/4',
+        component: () => import('../components/About_item/About_4.vue'),
+        props: true
+      },
+      {
+        path: 'about/5',
+        component: () => import('../components/About_item/About_5.vue'),
+        props: true
+      },
+      {
+        path: 'about/6',
+        component: () => import('../components/About_item/About_6.vue'),
+        props: true
+      },
+      {
+        path: 'about/7',
+        component: () => import('../components/About_item/About_7.vue'),
+        props: true
+      },
+      {
+        path: 'about/8',
+        component: () => import('../components/About_item/About_8.vue'),
+        props: true
+      }
+    ]
   },
   {
     path: '/:pathMatch(.*)*',

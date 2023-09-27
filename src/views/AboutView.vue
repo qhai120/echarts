@@ -1,19 +1,28 @@
 <template>
   <div class="about">
-    <h1>This is an about page{{num}}</h1>
-    <hello v-model:num="num"></hello>
+    <div style="display: flex;padding:20px">
+      <hello></hello>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 <script>
-import hello from '@/components/HelloWorld.vue'
+import hello from '../components/HelloWorld.vue'
+import { mapState } from 'vuex'
 export default {
-  data () {
-    return {
-      num: 1
-    }
-  },
   components: {
     hello
+  },
+  computed: {
+    ...mapState('moduleB', ['actives'])
+  },
+  activated () {
+    this.$router.push('/about/about/' + this.actives)
+  },
+  deactivated () {
   }
 }
 </script>
+<style lang="less" scoped>
+
+</style>

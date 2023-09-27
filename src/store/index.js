@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import moduleA from './module/moduleA'
+import moduleB from './module/moduleB'
 
 export default createStore({
   state: {
@@ -12,6 +13,7 @@ export default createStore({
   actions: {
   },
   modules: {
-    moduleA
+    moduleA,
+    moduleB
   }
 })

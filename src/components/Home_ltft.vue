@@ -12,6 +12,12 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 export default {
+  props: {
+    page: {
+      type: Number,
+      default: 1
+    }
+  },
   data () {
     return {
 
@@ -29,6 +35,8 @@ export default {
       this.changeActive(this.list[i].index)
     }
 
+  },
+  created () {
   }
 }
 </script>

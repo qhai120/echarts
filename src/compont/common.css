@@ -37,3 +37,9 @@
 .active{
     color: orange;
 }
+.mycharts {
+    width: 500px;
+    height: 500px;
+    margin: 100px 200px;
+    border: 1px solid orange;
+  }

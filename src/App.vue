@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/home">基础</router-link> |
-    <router-link to="/about">进阶</router-link>
+    <router-link to="/home" class="link" @click="Component='about'">基础</router-link> |
+    <router-link to="/about" class="link" @click="Component='HomeView'">进阶</router-link>
   </nav>
   <router-view v-slot='{Component}'>
     <keep-alive>
@@ -13,6 +13,7 @@
 
 <script>
 import HomeView from './views/HomeView.vue'
+import about from './views/AboutView.vue'
 export default {
   data () {
     return {
@@ -20,7 +21,7 @@ export default {
     }
   },
   components: {
-    HomeView
+    HomeView, about
   }
 }
 </script>
@@ -37,14 +38,6 @@ export default {
 nav {
   padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 
 </style>
