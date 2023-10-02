@@ -77,6 +77,18 @@ export default {
             focus: 'series'
           }
         }
+      ],
+      dataZoom: [
+        {
+          type: 'slider',
+          xAxisIndex: 0,
+          fliterMode: 'none'
+        },
+        {
+          type: 'slider',
+          yAxisIndex: 0,
+          fliterMode: 'none'
+        }
       ]
     })
   }

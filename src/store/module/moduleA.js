@@ -8,8 +8,8 @@ const moduleA = {
       { index: 4, name: '饼状图' },
       { index: 5, name: '折线图' },
       { index: 6, name: '散点图' },
-      { index: 7, name: 'grid设置' },
-      { index: 8, name: '事件与行为' }
+      { index: 7, name: 'k线图' },
+      { index: 8, name: '雷达图' }
     ],
     actives: 1
   },
