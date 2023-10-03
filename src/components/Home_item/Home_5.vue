@@ -91,6 +91,10 @@ export default {
         }
       ]
     })
+    window.addEventListener('resize', (e) => {
+      console.log(window.innerWidth)
+      myEcharts.resize()
+    })
   }
 }
 </script>

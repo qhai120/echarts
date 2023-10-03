@@ -12,7 +12,10 @@ export default {
   },
   methods: {},
   mounted () {
-    const myEcharts = echarts.init(this.$refs.mycharts)
+    const myEcharts = echarts.init(this.$refs.mycharts, 'light')
+    myEcharts.on('click', (params) => {
+      console.log(params)
+    })
     const option = {
       dataset: [
         {
@@ -36,6 +39,15 @@ export default {
           }
         }
       ],
+      animation: true,
+      // 要出现动画data条数最小的阈值
+      animationThreshold: 4,
+      // 出现动画的时间
+      animationDuration: 5000,
+      // 动画延迟时间
+      animationDelay: 2000,
+      // 时间过度曲线
+      animationEasing: 'linear',
       title: {
         text: 'hello'
       },
